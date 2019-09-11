@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICUDBMySQLRepository", "ICU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICUDBMySQLRepoInterfaceLib", "ICUDBMySQLRepoInterfaceLib\ICUDBMySQLRepoInterfaceLib.csproj", "{D7F02270-3B64-410D-85E4-DC7D9471D5C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyPart2.Tests", "CaseStudyPart2.Tests\CaseStudyPart2.Tests.csproj", "{3BA46E27-AC84-4446-ACF4-FA327BCD7998}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{D7F02270-3B64-410D-85E4-DC7D9471D5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7F02270-3B64-410D-85E4-DC7D9471D5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7F02270-3B64-410D-85E4-DC7D9471D5C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA46E27-AC84-4446-ACF4-FA327BCD7998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA46E27-AC84-4446-ACF4-FA327BCD7998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA46E27-AC84-4446-ACF4-FA327BCD7998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA46E27-AC84-4446-ACF4-FA327BCD7998}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

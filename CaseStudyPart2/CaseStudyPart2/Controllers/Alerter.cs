@@ -14,7 +14,7 @@ using Spo2CheckerLib;
 using TemperatureCheckerLib;
 namespace CaseStudyPart2.Controllers
 {
-    public class Alerter : ApiController
+    public class Alerter:ApiController
     {
         ISpo2Checker _spo2Checker;
         IPulseChecker _pulseChecker;
@@ -32,7 +32,7 @@ namespace CaseStudyPart2.Controllers
         public static int cnt = 1;
 
         [Route("api/lol")]
-        [HttpGet,HttpPost]
+        [HttpGet]
         public string getlo()
         {
             return "lol";
@@ -90,6 +90,7 @@ namespace CaseStudyPart2.Controllers
             res[id] = localList;
             return localList;
         }
+
         [Route("api/AlarmShutter/{id}")]
         [HttpGet]
         public void TurnOffAlarm(string id)

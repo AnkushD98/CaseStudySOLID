@@ -13,6 +13,7 @@ namespace CaseStudyPart2.Controllers
             // Web API configuration and services
 
             // Web API routes
+            //config.EnsureInitialized();
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

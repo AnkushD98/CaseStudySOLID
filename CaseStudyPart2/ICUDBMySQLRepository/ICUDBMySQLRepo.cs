@@ -138,7 +138,7 @@ namespace ICUDBMySQLRepository
             reader.Read();
              spo2 = (int)reader[1];
              pulse = (int)reader[3];
-            _ = (string)reader[0];
+            id = (string)reader[0];
             temp = (double)reader[2];
 
 
