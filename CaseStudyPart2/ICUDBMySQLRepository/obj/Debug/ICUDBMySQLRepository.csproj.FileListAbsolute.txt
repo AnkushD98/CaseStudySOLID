@@ -1,0 +1,13 @@
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\bin\Debug\ICUDBMySQLRepository.dll
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\bin\Debug\ICUDBMySQLRepository.pdb
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\bin\Debug\DataModelsLib.dll
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\bin\Debug\ICUDBMySQLRepoInterfaceLib.dll
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\bin\Debug\Newtonsoft.Json.dll
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\bin\Debug\DataModelsLib.pdb
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\bin\Debug\ICUDBMySQLRepoInterfaceLib.pdb
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\bin\Debug\Newtonsoft.Json.xml
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.csprojAssemblyReference.cache
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.csproj.CoreCompileInputs.cache
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.csproj.CopyComplete
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.dll
+C:\Users\320050487\source\repos\CaseStudyPart2\ICUDBMySQLRepository\obj\Debug\ICUDBMySQLRepository.pdb
