@@ -26,7 +26,7 @@ namespace Tests
         [Test]
         public void TestICU()
         {
-            ICU icu= new ICU();
+            Icu icu= new Icu();
             icu.NoOfBeds = 3;
             Patient p= new Patient();
             icu.ICUPatient = p;
@@ -34,10 +34,10 @@ namespace Tests
             bedOccupancy.Add(1,true);
             bedOccupancy.Add(3,true);
             bedOccupancy.Add(9,false);
-            ICU.BedOccupancy = bedOccupancy;
+            Icu.BedOccupancy = bedOccupancy;
             Assert.AreEqual(icu.NoOfBeds, 3);
             Assert.AreEqual(icu.ICUPatient,p);
-            Assert.AreEqual(ICU.BedOccupancy,bedOccupancy);
+            Assert.AreEqual(Icu.BedOccupancy,bedOccupancy);
         }
     }
 }

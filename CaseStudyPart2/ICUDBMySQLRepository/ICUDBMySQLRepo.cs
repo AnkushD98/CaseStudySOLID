@@ -11,9 +11,9 @@ using Newtonsoft.Json;
 
 namespace ICUDBMySQLRepository
 {
-    public class ICUDBMySQLRepo : IICUDBRepo
+    public class IcuDbMySqlRepo : IIcuDbRepo
     {
-        public ICUDBMySQLRepo()
+        public IcuDbMySqlRepo()
         {
             SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ICUDB;
                Integrated Security=True;MultipleActiveResultSets=true");
@@ -21,7 +21,6 @@ namespace ICUDBMySQLRepository
             SqlCommand cmd1 = new SqlCommand("SELECT * FROM Beds", con);
             var reader = cmd1.ExecuteReader();
             Dictionary<int, bool> occupied = new Dictionary<int, bool>();
-            occupied.Clear();
 
             while (reader.Read())
             {
@@ -37,7 +36,7 @@ namespace ICUDBMySQLRepository
 
             }
 
-            ICU.BedOccupancy = occupied;
+            Icu.BedOccupancy = occupied;
         }
         public void AdmitPatient(string id,int bedno)
         {
@@ -45,7 +44,7 @@ namespace ICUDBMySQLRepository
             SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ICUDB;
                Integrated Security=True;MultipleActiveResultSets=true");
             con.Open();
-            //SqlCommand cmd1 = new SqlCommand("SELECT * FROM Beds", con);
+
             SqlCommand cmd2 = new SqlCommand("SELECT * FROM ICUSTATE", con);
             var reader2 = cmd2.ExecuteReader();
             int bedsFree=10, bedsOccupied=0;
@@ -58,19 +57,19 @@ namespace ICUDBMySQLRepository
             
             //Admit Patient 
 
-            List<Patient> Patients=new List<Patient>();
+            List<Patient> patients;
 
             var reader1 = new StreamReader("PatientData.json");
             string content = reader1.ReadToEnd();
 
             var data = JsonConvert.DeserializeObject(content, typeof(List<Patient>));
             if (data is List<Patient>)
-                Patients = data as List<Patient>;
+                patients = data as List<Patient>;
                 
             else
                 throw new ArgumentException("Failed to load JSON file");
             con.Close();
-            foreach (var patient in Patients)
+            foreach (var patient in patients)
             {
                 if (patient.PatientId == id)
                 {
@@ -95,20 +94,22 @@ namespace ICUDBMySQLRepository
                 }
             }
             
-            if (ICU.BedOccupancy[bedno] ==true)
+            if (Icu.BedOccupancy[bedno])
                 return;
-            ICU.BedOccupancy[bedno] = true;
+            Icu.BedOccupancy[bedno] = true;
 
 
             SqlCommand cmd4 = new SqlCommand($"UPDATE BEDS SET OCCUPIED='Y' WHERE BEDNO={bedno}", con);
             cmd4.ExecuteNonQuery();
+            reader1.Dispose();
+            con.Close();
         }
 
         public void DischargePatient(string id ,int bedno)
         { 
-                if (ICU.BedOccupancy[bedno] != null && ICU.BedOccupancy[bedno] == true)
+                if ( Icu.BedOccupancy[bedno] )
                     return;
-                ICU.BedOccupancy[bedno] = false;
+                Icu.BedOccupancy[bedno] = false;
                 SqlConnection con =
                     new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ICUDB;Integrated Security=True");
                 string query = @"UPDATE ICUSTATE SET BEDSOCCUPIED=BEDSOCCUPIED-1 

@@ -8,6 +8,6 @@ namespace Spo2CheckerInterfaceLib
 {
     public interface ISpo2Checker
     {
-        Vitals.Spo2Level CheckSpo2(int spo2Level);
+        Vitals.Spo2Level CheckSpo2(int spo2);
     }
 }

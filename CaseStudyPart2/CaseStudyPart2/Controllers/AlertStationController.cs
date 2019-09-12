@@ -19,14 +19,14 @@ namespace CaseStudyPart2.Controllers
         ISpo2Checker _spo2Checker;
         IPulseChecker _pulseChecker;
         ITempChecker _tempChecker;
-        ICUDBMySQLRepoInterfaceLib.IICUDBRepo _db;
-        UnityContainer _con = new UnityContainer();
+        ICUDBMySQLRepoInterfaceLib.IIcuDbRepo _db;
+        readonly UnityContainer _con = new UnityContainer();
         public AlertStationController()
         {
             _con.RegisterType<ISpo2Checker, Spo2Checker>();
             _con.RegisterType<IPulseChecker, PulseChecker>();
             _con.RegisterType<ITempChecker, TempChecker>();
-            _con.RegisterType<ICUDBMySQLRepoInterfaceLib.IICUDBRepo, ICUDBMySQLRepository.ICUDBMySQLRepo>();
+            _con.RegisterType<ICUDBMySQLRepoInterfaceLib.IIcuDbRepo, ICUDBMySQLRepository.IcuDbMySqlRepo>();
         }
         public static Dictionary<string, List<string>> res = new Dictionary<string, List<string>>();
         public static int cnt = 1;
@@ -38,7 +38,7 @@ namespace CaseStudyPart2.Controllers
             _pulseChecker = _con.Resolve<IPulseChecker>();
             _spo2Checker = _con.Resolve<ISpo2Checker>();
             _tempChecker = _con.Resolve<ITempChecker>();
-            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IICUDBRepo>();
+            _db = _con.Resolve<ICUDBMySQLRepoInterfaceLib.IIcuDbRepo>();
             List<string> localList = new List<string>();
             if (res.ContainsKey(id))
             {

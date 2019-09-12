@@ -9,7 +9,7 @@ namespace PulseCheckerLib
 {
     public class PulseChecker : IPulseChecker
     {
-        public Vitals.Pulse CheckPulse(int p)
+        public Vitals.Pulse CheckPulse(int p )
         {
             if (p >= 0 && p < 40)
             {
