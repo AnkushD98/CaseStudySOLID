@@ -1,2 +1,3 @@
 # CaseStudySOLID
- Rule Based Alerting System is a Web Service application that provides services for generating Alerts for the patients in the ICU. It also admits and discharges a patient from the ICU.
+ Rule Based Alerting System is a Web application that provides services for the patients in the ICU.
+ For more details, refer the CaseStudy2API.docx
